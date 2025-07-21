@@ -1,2 +1,2 @@
 # Ignore the webhook listener
-/webhook.php
+/html/webhook.php
