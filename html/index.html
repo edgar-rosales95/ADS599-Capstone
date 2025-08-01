@@ -1,41 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Welcome to the Server Test 2</title>
-  <style>
-    body {
-      background-color: #f5f7fa;
-      font-family: Arial, sans-serif;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-    }
-    h1 {
-      color: #2c3e50;
-    }
-    p {
-      margin-top: 0.5rem;
-      font-size: 1.1rem;
-    }
-    .tag {
-      margin-top: 1rem;
-      background: #3498db;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Smart Weeding System – Cut Costs. Save Time.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f7faf7;
+            color: #222;
+        }
+
+        header {
+            background-color: #2c6e49;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0 0 0.5rem;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        section {
+            padding: 2rem;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .benefits, .visuals, .calculator {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            color: #2c6e49;
+        }
+
+        .benefit-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .benefit {
+            flex: 1 1 280px;
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .benefit h3 {
+            margin-top: 0;
+        }
+
+        .visuals img {
+            width: 100%;
+            max-width: 700px;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: #2c6e49;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
-  <h1>🚀 Server is Live!</h1>
-  <p>If you're seeing this page, the web server is running correctly.</p>
-  <div class="tag">ADS599-Capstone</div>
+
+<header>
+    <h1>Smart Weeding with Computer Vision</h1>
+    <p>Automate weed detection. Cut labor costs. Boost productivity per acre.</p>
+</header>
+
+<section class="benefits">
+    <h2>Why Choose Our System?</h2>
+    <div class="benefit-list">
+        <div class="benefit">
+            <h3>💸 Lower Weeding Costs</h3>
+            <p>Replace expensive manual labor with automated field scanning and weed detection. Our system helps you save thousands per harvest season.</p>
+        </div>
+        <div class="benefit">
+            <h3>⏱ Faster Operations</h3>
+            <p>Process acres in a fraction of the time. Real-time detection means less downtime and fewer bottlenecks in the field.</p>
+        </div>
+        <div class="benefit">
+            <h3>🌾 Precision Agriculture</h3>
+            <p>Built for the future of farming. Our AI model can differentiate between crop types and target unwanted weeds with high accuracy.</p>
+        </div>
+    </div>
+</section>
+
+<section class="visuals">
+    <h2>Proven Performance</h2>
+    <p>Our deep learning model is trained on thousands of labeled field images. Below are live results from our latest model version:</p>
+    <h3>CNN</h3> 
+    <img src="../outputs/CNNconf.png?v=<php echo time(); ?>" alt="MobileNetV2 Confusion Matrix">    <p><em></em></p>
+    <p>description</p>
+
+    <h3>MobileNetV2</h3>
+   <img src="../outputs/Monetv2.png?v=<?php echo time(); ?>" alt="MobileNetV2 Confusion Matrix">
+    <p><em></em></p>
+    <p>
+    This confusion matrix shows how well the MobileNetV2 model distinguishes between four classes: <strong>broadleaf weeds</strong>, <strong>grass weeds</strong>, <strong>soil</strong>, and <strong>soybean crops</strong>. Each square represents the number of times a sample was correctly or incorrectly classified.
+    <br><br>
+    The model correctly identified <strong>1,462 soybean</strong> images with minimal errors. It also showed strong accuracy in weed detection, with <strong>234 broadleaf</strong> and <strong>701 grass</strong> samples classified correctly. Misclassifications were rare, indicating the model is both <strong>accurate and dependable</strong> for field use.
+    <br><br>
+    This high performance supports the use of MobileNetV2 in automated weed detection systems, reducing manual labor while improving precision in crop care.
+</p>
+
+
+</section>
+
+<section class="calculator">
+    <h2>Estimate Your Savings</h2>
+    <p>Coming soon: a calculator that shows exactly how much you can save by switching to automated weeding. Enter your acreage and labor rates, and see the cost difference instantly.</p>
+</section>
+
+<footer>
+    &copy; <?php echo date("Y"); ?> Smart Weeding System – Built for Modern Agriculture
+</footer>
+
 </body>
 </html>
+
