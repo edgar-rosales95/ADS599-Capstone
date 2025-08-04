@@ -109,7 +109,16 @@
     <p>Our deep learning model is trained on thousands of labeled field images. Below are live results from our latest model version:</p>
     <h3>CNN</h3> 
     <img src="../outputs/CNNconf.png?v=<php echo time(); ?>" alt="MobileNetV2 Confusion Matrix">    <p><em></em></p>
-    <p>description</p>
+    <p><em></em></p>
+    <p>
+    This confusion matrix shows the CNN model’s ability to classify four classes: <strong>broadleaf</strong>, <strong>grass</strong>, <strong>soil</strong>, and <strong>soybean</strong>.
+    The model correctly classified <strong>broadleaf 399</strong> times, with <strong>64 misclassifications</strong>; <strong>grass</strong> was correctly identified <strong>601</strong> times, with <strong>103 errors</strong>; <strong>soil</strong> was accurately classified <strong>648</strong> times, with only <strong>1 misclassification</strong>; and <strong>soybean</strong> was correctly predicted <strong>1,422</strong> times, with <strong>53 misclassified</strong> samples.
+    <br><br>
+    The model demonstrates strong overall accuracy, with most errors occurring between broadleaf and grass, which are often visually similar in real-world field conditions. In contrast, <strong>soil</strong> and <strong>soybean</strong> categories show exceptional reliability.
+    <br><br>
+    This high performance supports the use of the CNN model in automated weed detection systems, helping reduce manual labor while improving precision and efficiency in crop management.
+    </p>
+
 
     <h3>MobileNetV2</h3>
    <img src="../outputs/Monetv2.png?v=<?php echo time(); ?>" alt="MobileNetV2 Confusion Matrix">
@@ -120,15 +129,48 @@
     The model correctly identified <strong>1,462 soybean</strong> images with minimal errors. It also showed strong accuracy in weed detection, with <strong>234 broadleaf</strong> and <strong>701 grass</strong> samples classified correctly. Misclassifications were rare, indicating the model is both <strong>accurate and dependable</strong> for field use.
     <br><br>
     This high performance supports the use of MobileNetV2 in automated weed detection systems, reducing manual labor while improving precision in crop care.
-</p>
+    </p>
 
 
 </section>
 
 <section class="calculator">
-    <h2>Estimate Your Savings</h2>
-    <p>Coming soon: a calculator that shows exactly how much you can save by switching to automated weeding. Enter your acreage and labor rates, and see the cost difference instantly.</p>
+    <h2>🌾 Estimate Your Automated Weeding Savings</h2>
+    <p>Based on industry averages from Carbon Robotics, Verdant, FarmDroid, and more, calculate how much you could save per acre with automated weeding.</p>
+
+    <form method="POST">
+        <label for="acreage">Enter Acreage:</label><br>
+        <input type="number" name="acreage" id="acreage" step="0.1" min="0" required><br><br>
+
+        <input type="submit" value="Calculate Savings">
+    </form>
+
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $acreage = floatval($_POST["acreage"]);
+
+        // Blended industry values
+        $manual_cost_per_acre = 884.11;
+        $automated_cost_per_acre = 291.64;
+        $savings_per_acre = $manual_cost_per_acre - $automated_cost_per_acre;
+
+        // Calculations
+        $total_manual_cost = $manual_cost_per_acre * $acreage;
+        $total_automated_cost = $automated_cost_per_acre * $acreage;
+        $total_savings = $total_manual_cost - $total_automated_cost;
+
+        // Output
+        echo "<div style='margin-top: 2rem; background: #f0fdf4; border: 1px solid #cce7d0; padding: 1rem; border-radius: 8px;'>";
+        echo "<h3>💡 Results:</h3>";
+        echo "<p><strong>Manual Weeding Cost:</strong> $" . number_format($total_manual_cost, 2) . "</p>";
+        echo "<p><strong>Automated Weeding Cost:</strong> $" . number_format($total_automated_cost, 2) . "</p>";
+        echo "<p><strong>Estimated Savings:</strong> <span style='color: green;'>$" . number_format($total_savings, 2) . "</span></p>";
+        echo "<p style='font-size: 0.9rem; color: #555;'>* Based on a blended average of industry sources across Carbon Robotics, Verdant, FarmDroid, and more.</p>";
+        echo "</div>";
+    }
+    ?>
 </section>
+
 
 <footer>
     &copy; <?php echo date("Y"); ?> Smart Weeding System – Built for Modern Agriculture
