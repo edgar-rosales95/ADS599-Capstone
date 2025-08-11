@@ -55,7 +55,7 @@ We implemented a standardized training and validation pipeline:
 
 ## Key Results
 ### Example Confusion Matrix (MobileNetV2)
-![MobileNetV2 Confusion Matrix](outputs/mobilenetv2_confusion_matrix.png)
+![MobileNetV2 Confusion Matrix](outputs/Monetv2.png)
 
 **Performance Snapshot:**
 | Model         | Accuracy | Broadleaf Recall | Strengths                                      |
@@ -80,5 +80,4 @@ The web app demonstrates:
 ## Installation & Usage
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/USERNAME/REPO-NAME.git
-   cd REPO-NAME
+   git clone https://github.com/edgar-rosales95/ADS599-Capstone.git
