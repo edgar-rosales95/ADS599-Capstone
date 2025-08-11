@@ -1,1 +1,84 @@
 # ADS599-Capstone
+
+# Deep Learning-Based Plant Identification for Automated Agricultural Weed Control
+
+## Overview
+This project explores the use of convolutional neural networks (CNNs) to automate weed detection in soybean crops using image classification.  
+Our goal is to reduce manual labor, minimize herbicide use, and enable real-time, edge-deployable weed control solutions**.
+
+We evaluated **four CNN architectures**:
+- **Baseline CNN** – Benchmark for augmentation and weighting strategies.
+- **EfficientNetB0** – High accuracy-to-efficiency ratio using compound scaling.
+- **MobileNetV2** – Lightweight and optimized for embedded/edge devices.
+- **ResNet-50** – Deep feature extraction with residual connections for robustness.
+
+The final deliverable includes both **trained models** and a **web application** that showcases results and features a **Cost Savings Calculator**.
+
+---
+
+## Navigation
+- **`/notebooks/`** – Jupyter notebooks for data exploration, preprocessing, training, and evaluation.
+- **`/outputs/`** – Model performance visualizations, including confusion matrices and classification reports.
+- **`/html/`** – Web application files (auto-updates from GitHub).
+- **`/imports.py`** – Centralized Python imports for all notebooks.
+- **`README.md`** – You are here.
+
+---
+
+## Dataset
+- **Source:** [Weed Detection in Soybean Crops (Kaggle)](https://www.kaggle.com/datasets/fpeccia/weed-detection-in-soybean-crops)
+- **Total Images:** 15,336 TIFF images
+- **Classes:**  
+  1. Broadleaf weeds  
+  2. Grass weeds  
+  3. Soil  
+  4. Soybean crops
+
+All images were standardized to **224×224 px** with zero-padding to preserve aspect ratio.
+
+---
+
+## Modeling Approach
+We implemented a standardized training and validation pipeline:
+1. **Data Split:** Stratified 80:20 train-validation split to preserve class balance.
+2. **Preprocessing:** Resizing, zero-padding, and rescaling.
+3. **Class Imbalance Handling:** Oversampling, aggressive augmentation, and class weighting.
+4. **Training Controls:** Early stopping to prevent overfitting.
+5. **Evaluation:** Confusion matrices and classification reports.
+
+### Model Highlights
+- **EfficientNetB0** and **MobileNetV2** achieved **>99% accuracy** with minimal misclassifications.
+- **Baseline CNN** recall for *broadleaf* improved from 0.71 → 0.86 with augmentation and weighting.
+- **ResNet-50** performed well but showed moderate confusion between *broadleaf* and *grass*.
+
+---
+
+## Key Results
+### Example Confusion Matrix (MobileNetV2)
+![MobileNetV2 Confusion Matrix](outputs/mobilenetv2_confusion_matrix.png)
+
+**Performance Snapshot:**
+| Model         | Accuracy | Broadleaf Recall | Strengths                                      |
+|---------------|----------|------------------|------------------------------------------------|
+| Baseline CNN  | 94%      | 0.88              | Improved with targeted augmentation            |
+| EfficientNetB0| 99.7%    | 0.99              | Balanced high accuracy with efficiency         |
+| MobileNetV2   | 99%      | 0.98              | Lightweight and ideal for edge deployment      |
+| ResNet-50     | 84%      | 0.80              | Strong on distinct classes, struggled on similar ones |
+
+---
+
+## Web Application
+The web app demonstrates:
+- **Model Performance Visuals** – Confusion matrices and accuracy curves.
+- **Automated Updates** – Syncs with GitHub for real-time model result deployment.
+- **Savings Calculator:** Cost Savings Calculator for estimating labor and expense reductions.
+
+**Screenshot:**
+![Web App Screenshot](outputs/webpage_screenshot.png)
+
+
+## Installation & Usage
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/USERNAME/REPO-NAME.git
+   cd REPO-NAME
