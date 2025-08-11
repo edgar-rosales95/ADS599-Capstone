@@ -81,3 +81,50 @@ The web app demonstrates:
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/edgar-rosales95/ADS599-Capstone.git
+
+Install Python **3.9+** if you don’t already have it. Then install all dependencies listed in `requirements.txt`:
+
+```bash
+pip install -r requirements.txt
+```
+
+To explore the dataset, train models, or view analysis results, launch Jupyter:
+
+```bash
+jupyter notebook
+```
+
+Open any of the `.ipynb` files in the `/notebooks/` directory.
+
+The web application uses **`index.php`** and requires PHP to be installed locally.
+
+**Install PHP (if not already installed):**
+
+* **Windows:** Download from [https://windows.php.net/download/](https://windows.php.net/download/)
+* **macOS:**
+
+  ```bash
+  brew install php
+  ```
+* **Linux (Debian/Ubuntu):**
+
+  ```bash
+  sudo apt install php
+  ```
+
+Run the PHP server:
+
+```bash
+cd html
+php -S localhost:8000
+```
+
+Visit: [http://localhost:8000/index.php](http://localhost:8000/index.php)
+
+**Notes:**
+
+* The notebooks will automatically download the dataset via the KaggleHub API. You may need a Kaggle account and API key configured locally.
+* All model performance plots (confusion matrices, classification summaries) are saved to the `/outputs/` directory and automatically update the web app when pushed to GitHub.
+
+```
+```
