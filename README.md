@@ -1,16 +1,6 @@
 # ADS599-Capstone
 
-# Deep Learning-Based Plant Identification for Automated Agricultural Weed Control
-
-## Overview
-This project explores the use of convolutional neural networks (CNNs) to automate weed detection in soybean crops using image classification.  
-Our goal is to reduce manual labor, minimize herbicide use, and enable real-time, edge-deployable weed control solutions**.
-
-We evaluated **four CNN architectures**:
-- **Baseline CNN** – Benchmark for augmentation and weighting strategies.
-- **EfficientNetB0** – High accuracy-to-efficiency ratio using compound scaling.
-- **MobileNetV2** – Lightweight and optimized for embedded/edge devices.
-- **ResNet-50** – Deep feature extraction with residual connections for robustness.
+📄 **White Paper:** [Deep Learning-Based Plant Identification for Automated Agricultural Weed Control](Whitepaper.md)
 
 The final deliverable includes both **trained models** and a **web application** that showcases results and features a **Cost Savings Calculator**.
 
