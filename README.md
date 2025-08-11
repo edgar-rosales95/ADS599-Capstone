@@ -1,6 +1,6 @@
 # ADS599-Capstone
 
-**White Paper:** [Deep Learning-Based Plant Identification for Automated Agricultural Weed Control](whitepaper.md)
+**Executive Summary:** [Deep Learning-Based Plant Identification for Automated Agricultural Weed Control](whitepaper.md)
 
 The final deliverable includes both **trained models** and a **web application** that showcases results and features a **Cost Savings Calculator**.
 
