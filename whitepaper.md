@@ -77,7 +77,9 @@ Top-performing models were integrated into a **PHP-based web application** that 
 ## **Solution Details**
 **MobileNetV2** and **EfficientNetB0** demonstrated the highest viability for real-world deployment:
 - **MobileNetV2** – Ideal for edge devices due to its **small size** and **fast inference**.  
-- **EfficientNetB0** – Achieved **near-perfect accuracy** through fine-tuning and class weighting.  
+- **EfficientNetB0** – Achieved **near-perfect accuracy** through fine-tuning and class weighting.
+- Note: Baseline CNN – was used in the debut version of the Web App as a lightweight quick-to-load model; however, its performance was not among the top models
+
 
 The **web application** enables stakeholders to:
 - Visualize model performance
