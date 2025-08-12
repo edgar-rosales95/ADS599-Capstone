@@ -23,9 +23,7 @@ The dataset **is not** stored in this GitHub repository due to its large size.
 
 ## Local Storage
 When first downloaded via the KaggleHub API, the dataset is stored in your local cache directory:
-
-Example Path: 
-C:\Users<YourUser>.cache\kagglehub\datasets\fpeccia\weed-detection-in-soybean-crops\versions\1\dataset
+Example Path: C:\Users<YourUser>.cache\kagglehub\datasets\fpeccia\weed-detection-in-soybean-crops\versions\1\dataset
 
 The dataset is comprised of 4 folders representing the 4 classes below
 
