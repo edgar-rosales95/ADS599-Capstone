@@ -127,7 +127,7 @@ Visit: [http://localhost:8000/index.php](http://localhost:8000/index.php)
 * All model performance plots (confusion matrices, classification summaries) are saved to the `/outputs/` directory and automatically update the web app when pushed to GitHub.
 
 ## Project Team
-|--------------|
+
 Edgar Rosales 
 Marinela Inguito
 Bobby Marriott
