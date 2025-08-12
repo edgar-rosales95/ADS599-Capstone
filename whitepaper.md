@@ -84,6 +84,7 @@ The **web application** enables stakeholders to:
 - Visualize model performance
 - Access updated confusion matrices
 - (Future) Calculate estimated labor cost savings  
+
 Note: Baseline CNN – was used in the debut version of the Web App as a lightweight quick-to-load model; however, its performance was not among the top models
 
 Automated **GitHub integration** ensures the system remains current without manual intervention.
