@@ -115,6 +115,5 @@ Visit: [http://localhost:8000/index.php](http://localhost:8000/index.php)
 
 * The notebooks will automatically download the dataset via the KaggleHub API. You may need a Kaggle account and API key configured locally.
 * All model performance plots (confusion matrices, classification summaries) are saved to the `/outputs/` directory and automatically update the web app when pushed to GitHub.
-
 ```
 ```
