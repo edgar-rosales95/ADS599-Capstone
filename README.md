@@ -128,6 +128,6 @@ Visit: [http://localhost:8000/index.php](http://localhost:8000/index.php)
 
 ## Project Team
 
-Edgar Rosales 
-Marinela Inguito
+Edgar Rosales<br> 
+Marinela Inguito<br> 
 Bobby Marriott
