@@ -74,6 +74,7 @@ The web app demonstrates:
 - **Savings Calculator:** Cost Savings Calculator for estimating labor and expense reductions.
 
 **Screenshot:**
+
 ![Web App Screenshot](outputs/webpage_screenshot.png)
 
 
